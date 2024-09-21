@@ -1,0 +1,17 @@
+{
+  "name": "nestnet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "packageManager": "pnpm@9.11.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "list-workspaces": "pnpm m ls --depth -1 --json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "turbo": "^2.1.2"
+  }
+}
