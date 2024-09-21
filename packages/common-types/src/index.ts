@@ -1,4 +1,9 @@
-export type TestCommonType = {
-    propertyOne: string;
-    propertyTwo: number;
+export type CreateUserRequest = {
+    email: string;
+    password: string;
+}
+
+export type CreateUserEvent = {
+    email: string,
+    password: string
 }
