@@ -2,7 +2,7 @@ import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { CreateUserRequest } from '@repo/common-types';
 
-@Controller()
+@Controller('user')
 export class AppController {
   constructor(private readonly appService: AppService) { }
 
@@ -11,7 +11,12 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Post()
+  @Get('/getHouses')
+  getHouses() {
+    return this.appService.getHouses();
+  }
+
+  @Post('/createUser')
   createUser(@Body() createUserRequest: CreateUserRequest): Boolean {
     this.appService.createUser(createUserRequest);
     return true;
